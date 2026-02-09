@@ -1,0 +1,88 @@
+:root {
+  --bg-primary: #0f1115;
+  --bg-secondary: #1a1d21;
+  --bg-tertiary: #25282e;
+  --text-primary: #ffffff;
+  --text-secondary: #8a8f98;
+  --border-color: #2f333a;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.board {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  overflow-x: auto;
+  min-height: calc(100vh - 64px);
+}
+
+.column {
+  width: 300px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.column-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 600;
+}
+
+.column-content {
+  padding: 12px;
+  min-height: 100px;
+}
+
+.task-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 10px;
+  cursor: grab;
+}
+
+.task-card:hover {
+  border-color: var(--accent);
+}
+
+.priority-high { color: #ef4444; }
+.priority-medium { color: #f59e0b; }
+.priority-low { color: #10b981; }
+
+.btn {
+  padding: 10px 16px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
